@@ -1,5 +1,5 @@
-# Use an official nginx image as the parent image
-FROM nginx:latest
+# Use an official nginx image based on Alpine Linux as the parent image
+FROM nginx:alpine
 
 # Remove the default nginx HTML files
 RUN rm -rf /usr/share/nginx/html/*
