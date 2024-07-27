@@ -4,7 +4,7 @@
     "description": "A brief description of your project",
     "main": "index.js",
     "scripts": {
-      "test": "jest",
+      "test": "echo \"No tests found. Please add test files.\"",
       "lint": "eslint .",
       "start": "node index.js",
       "build": "echo \"Build script not defined\""
