@@ -1,20 +1,14 @@
-# Use an official Node.js runtime as a parent image
-FROM node:14
+# Use an official nginx image as the parent image
+FROM nginx:latest
 
-# Set the working directory in the container
-WORKDIR /usr/src/app
+# Remove the default nginx HTML files
+RUN rm -rf /usr/share/nginx/html/*
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+# Copy the static HTML files to nginx's HTML directory
+COPY . /usr/share/nginx/html
 
-# Install dependencies
-RUN npm install
+# Expose port 80 to the outside world
+EXPOSE 80
 
-# Copy the rest of the application code to the working directory
-COPY . .
-
-# Expose port 3000
-EXPOSE 3000
-
-# Run the application
-CMD [ "npm", "start" ]
+# Start nginx when the container launches
+CMD ["nginx", "-g", "daemon off;"]
