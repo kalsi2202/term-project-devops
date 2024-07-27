@@ -1,7 +1,44 @@
 {
+    "name": "devops_termproject",
+    "version": "1.0.0",
+    "description": "A brief description of your project",
+    "main": "index.js",
     "scripts": {
+      "test": "jest",
       "lint": "eslint .",
-      "test": "jest"
-    }
+      "start": "node index.js",
+      "build": "echo \"Build script not defined\""
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+      "eslint": "^8.0.0",
+      "jest": "^29.0.0",
+      "babel-jest": "^29.0.0", 
+      "eslint-plugin-jest": "^27.0.0" 
+    },
+    "eslintConfig": {
+      "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+      },
+      "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+      ],
+      "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+      },
+      "rules": {
+      }
+    },
+    "jest": {
+      "testEnvironment": "node"
+    },
+    "browserslist": [
+      "> 0.5%, last 2 versions, Firefox ESR, not dead"
+    ]
   }
   
