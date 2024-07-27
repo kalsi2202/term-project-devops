@@ -10,6 +10,8 @@
       "build": "echo \"Build script not defined\""
     },
     "dependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
     },
     "devDependencies": {
       "eslint": "^8.0.0",
