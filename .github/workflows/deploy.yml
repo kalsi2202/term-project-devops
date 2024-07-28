@@ -46,8 +46,3 @@ jobs:
       run: |
         docker build -t kalsiparth252/devops-project-image:latest .
         docker push kalsiparth252/devops-project-image:latest
-
-    - name: Deploy to Kubernetes
-      run: |
-        kubectl apply -f deployment.yaml --validate=false
-        kubectl apply -f service.yaml --validate=false
